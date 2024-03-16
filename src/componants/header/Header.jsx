@@ -97,7 +97,7 @@ const Header = () => {
                 and by professional cooks and chefs in restaurants and other
                 food establishments.
               </p>
-              <div className="flex gap-2 justify-center mb-16">
+              <div className="flex flex-col lg:flex-row gap-2 justify-center mb-16">
                 <button className="btn rounded-full border-none bg-[#0BE58A] text-black px-8">
                   Explore Now
                 </button>
