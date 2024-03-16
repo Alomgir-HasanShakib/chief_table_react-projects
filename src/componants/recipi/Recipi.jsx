@@ -14,7 +14,7 @@ const Recipi = ({ recipi, handleCook }) => {
       <div className="main-container container mx-auto ">
         <div className="left-col">
           {/* main body  */}
-          <div className="card max-w-96 h-[650px] bg-base-100 shadow-xl">
+          <div className="card max-w-96 lg:h-[650px] bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
               <img src={recipe_image} className="rounded-lg" />
             </figure>

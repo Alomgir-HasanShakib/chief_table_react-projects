@@ -41,8 +41,8 @@ const Recipies = () => {
 
   return (
     <>
-      <div className="container mx-auto flex justify-between">
-        <div className="grid grid-cols-2 gap-8">
+      <div className="container mx-auto px-3 flex flex-col lg:flex-row justify-between gap-8">
+        <div className="grid grid-cols-1  lg:grid-cols-2 gap-8">
           {recipies.map((recipi) => (
             <Recipi
               handleCook={handleCook}
@@ -52,10 +52,10 @@ const Recipies = () => {
           ))}
         </div>
         <div>
-          <div className="table  border p-10 mb-10">
+          <div className="table  border lg:p-10 mb-10  ">
             <div className="">
               <div className="text-center mb-3">
-                <h2 className="text-5xl">Want to cook: {count}</h2>
+                <h2 className="text-2xl lg:text-5xl">Want to cook: {count}</h2>
               </div>
               <table className="table">
                 {/* head */}
@@ -75,7 +75,7 @@ const Recipies = () => {
                       <td>{item.preparing_time}</td>
                       <td>{item.calories}</td>
                       <td
-                        className="btn bg-green-400 rounded-full"
+                        className="btn text-xs bg-green-400 rounded-full"
                         onClick={() => handleCooking(item)}
                       >
                         Preparing
@@ -87,10 +87,10 @@ const Recipies = () => {
               <ToastContainer />
             </div>
           </div>
-          <div className="table  border p-10">
+          <div className="table  border p-2 lg:p-10">
             <div className="">
               <div className="text-center mb-3">
-                <h2 className="text-5xl">Currently cooking: {totalCooking}</h2>
+                <h2 className=" text-2xl lg:text-5xl">Currently cooking: {totalCooking}</h2>
               </div>
               <table className="table">
                 {/* head */}

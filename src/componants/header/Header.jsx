@@ -46,7 +46,7 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
-              <a className=" text-3xl font-bold">Recipe Calories</a>
+              <a className=" text-3xl font-bold ">FoodAppy</a>
             </div>
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
@@ -65,7 +65,7 @@ const Header = () => {
               </ul>
             </div>
             <div className="navbar-end ">
-              <label className="input flex items-center gap-2 rounded-full text-xl bg-gray-200">
+              <label className="input hidden lg:flex items-center gap-2 rounded-full text-xl bg-gray-200">
                 <CiSearch />
                 <input type="text" className="grow " placeholder="Search" />
               </label>
@@ -76,9 +76,9 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <div className="hero-section container mx-auto mb-24">
+      <div className="hero-section container mx-auto mb-24 px-3">
         <div
-          className="hero rounded-lg py-32 px-52"
+          className="hero rounded-lg lg:py-32 lg:px-52"
           style={{
             backgroundImage:
               "url(https://i.postimg.cc/NM6TWg5X/Rectangle-1.png)",
@@ -88,10 +88,10 @@ const Header = () => {
         >
           <div className="hero-content text-center text-neutral-content">
             <div className="mt-16">
-              <h1 className="mb-5 text-[52px] text-white font-bold">
+              <h1 className="mb-5 text-2xl md:text-4xl lg:text-[52px] text-white font-bold lg:leading-[2]">
                 Discover an exceptional cooking class tailored for you!
               </h1>
-              <p className="mb-5 text-xl leading-[2]">
+              <p className="mb-5 text-xs lg:text-xl leading-[2]">
                 Types of cooking also depend on the skill levels and training of
                 the cooks. Cooking is done both by people in their own dwellings
                 and by professional cooks and chefs in restaurants and other
