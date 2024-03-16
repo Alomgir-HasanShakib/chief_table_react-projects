@@ -1,6 +1,6 @@
 import { CiClock2 } from "react-icons/ci";
 import { FaFire } from "react-icons/fa";
-const Recipi = ({ recipi, handleCart }) => {
+const Recipi = ({ recipi, handleCook }) => {
   const {
     recipe_name,
     short_description,
@@ -48,7 +48,7 @@ const Recipi = ({ recipi, handleCart }) => {
                 </div>
               </div>
               <div className="card-actions">
-                <button onClick={()=> handleCart(recipi)} className="btn bg-green-400 text-[#150B2B] rounded-full font-medium text-[]18px">
+                <button onClick={()=> handleCook(recipi)} className="btn bg-green-400 text-[#150B2B] rounded-full font-medium text-[]18px">
                   Want to Cook
                 </button>
               </div>
