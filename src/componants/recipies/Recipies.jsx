@@ -6,8 +6,11 @@ import "react-toastify/dist/ReactToastify.css";
 const Recipies = () => {
   const [recipies, setRecipies] = useState([]);
   const [cook, setCook] = useState([]);
+  const [totalCooking, setTotalcooking] = useState(0);
   const [cooking, setCooking] = useState([]);
   const [count, setCount] = useState(0);
+  const [totalTime, setTotaltime] = useState(0);
+  const [totalCalories, setTotalcalory] = useState(0);
   useEffect(() => {
     fetch("recipi.json")
       .then((res) => res.json())
@@ -27,7 +30,13 @@ const Recipies = () => {
   const handleCooking = (item) => {
     const newCook = cook.filter((cok) => cok.recipe_id != item.recipe_id);
     setCook(newCook);
+    setCount(count - 1);
     setCooking([...cooking, item]);
+    setTotalcooking(totalCooking + 1);
+    const cookingTime = parseInt(item.preparing_time);
+    setTotaltime(totalTime + cookingTime);
+    const totalCalory = parseInt(item.calories);
+    setTotalcalory(totalCalory + totalCalories);
   };
 
   return (
@@ -81,7 +90,7 @@ const Recipies = () => {
           <div className="table  border p-10">
             <div className="">
               <div className="text-center mb-3">
-                <h2 className="text-5xl">Currently cooking: 02</h2>
+                <h2 className="text-5xl">Currently cooking: {totalCooking}</h2>
               </div>
               <table className="table">
                 {/* head */}
@@ -104,6 +113,12 @@ const Recipies = () => {
                   </tbody>
                 ))}
               </table>
+              <div className="flex justify-end gap-x-12 mt-16">
+                <h4 className="text-xl">Total Time = {totalTime} minutes</h4>
+                <h4 className="text-xl">
+                  Total Calories = {totalCalories} calories
+                </h4>
+              </div>
             </div>
           </div>
         </div>
